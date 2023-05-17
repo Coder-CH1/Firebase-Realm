@@ -1,0 +1,765 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		040D37DB2A14C4310072D4A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D37DA2A14C4310072D4A5 /* AppDelegate.swift */; };
+		040D37DD2A14C4310072D4A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D37DC2A14C4310072D4A5 /* SceneDelegate.swift */; };
+		040D37DF2A14C4310072D4A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D37DE2A14C4310072D4A5 /* ViewController.swift */; };
+		040D37E42A14C4330072D4A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040D37E32A14C4330072D4A5 /* Assets.xcassets */; };
+		040D37E72A14C4330072D4A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040D37E52A14C4330072D4A5 /* LaunchScreen.storyboard */; };
+		040D37F22A14C4330072D4A5 /* Firebase_RealmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D37F12A14C4330072D4A5 /* Firebase_RealmTests.swift */; };
+		040D37FC2A14C4330072D4A5 /* Firebase_RealmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D37FB2A14C4330072D4A5 /* Firebase_RealmUITests.swift */; };
+		040D37FE2A14C4330072D4A5 /* Firebase_RealmUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D37FD2A14C4330072D4A5 /* Firebase_RealmUITestsLaunchTests.swift */; };
+		040D380B2A14C4910072D4A5 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D380A2A14C4910072D4A5 /* LoginPageViewController.swift */; };
+		040D380D2A14C4A10072D4A5 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D380C2A14C4A10072D4A5 /* HomePageViewController.swift */; };
+		040D380F2A14C4DA0072D4A5 /* ChatsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D380E2A14C4DA0072D4A5 /* ChatsPageViewController.swift */; };
+		040D38142A14C57C0072D4A5 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D38132A14C57C0072D4A5 /* Label.swift */; };
+		040D38162A14C5C70072D4A5 /* HeaderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D38152A14C5C70072D4A5 /* HeaderTextField.swift */; };
+		040D38182A14C5F60072D4A5 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D38172A14C5F60072D4A5 /* Button.swift */; };
+		040D381C2A14E9E40072D4A5 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D381B2A14E9E40072D4A5 /* TabBar.swift */; };
+		040D381E2A14EACB0072D4A5 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D381D2A14EACB0072D4A5 /* CameraViewController.swift */; };
+		040D38202A14EADA0072D4A5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D381F2A14EADA0072D4A5 /* SettingsViewController.swift */; };
+		040D38222A14F07E0072D4A5 /* LinearGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D38212A14F07E0072D4A5 /* LinearGradient.swift */; };
+		040D38242A14FB3F0072D4A5 /* HomePageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D38232A14FB3F0072D4A5 /* HomePageCell.swift */; };
+		040D38262A1524450072D4A5 /* ChatsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D38252A1524450072D4A5 /* ChatsCollectionViewCell.swift */; };
+		040D382C2A1560650072D4A5 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D382B2A1560650072D4A5 /* UIFont.swift */; };
+		040D383B2A1560C70072D4A5 /* Inter-VariableFont_slnt,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 040D382E2A1560C60072D4A5 /* Inter-VariableFont_slnt,wght.ttf */; };
+		040D383C2A1560C70072D4A5 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 040D38302A1560C60072D4A5 /* Inter-Medium.ttf */; };
+		040D383D2A1560C70072D4A5 /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 040D38312A1560C60072D4A5 /* Inter-Light.ttf */; };
+		040D383E2A1560C70072D4A5 /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 040D38322A1560C60072D4A5 /* Inter-Thin.ttf */; };
+		040D383F2A1560C70072D4A5 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 040D38332A1560C60072D4A5 /* Inter-Bold.ttf */; };
+		040D38402A1560C70072D4A5 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 040D38342A1560C60072D4A5 /* Inter-Regular.ttf */; };
+		040D38412A1560C70072D4A5 /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 040D38352A1560C60072D4A5 /* Inter-ExtraBold.ttf */; };
+		040D38422A1560C70072D4A5 /* Inter-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 040D38362A1560C60072D4A5 /* Inter-ExtraLight.ttf */; };
+		040D38432A1560C70072D4A5 /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 040D38372A1560C60072D4A5 /* Inter-Black.ttf */; };
+		040D38442A1560C70072D4A5 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 040D38382A1560C60072D4A5 /* Inter-SemiBold.ttf */; };
+		040D38452A1560C70072D4A5 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 040D38392A1560C60072D4A5 /* OFL.txt */; };
+		040D38462A1560C70072D4A5 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 040D383A2A1560C60072D4A5 /* README.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		040D37EE2A14C4330072D4A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 040D37CF2A14C4310072D4A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 040D37D62A14C4310072D4A5;
+			remoteInfo = "Firebase-Realm";
+		};
+		040D37F82A14C4330072D4A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 040D37CF2A14C4310072D4A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 040D37D62A14C4310072D4A5;
+			remoteInfo = "Firebase-Realm";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		040D37D72A14C4310072D4A5 /* Firebase-Realm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Firebase-Realm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		040D37DA2A14C4310072D4A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		040D37DC2A14C4310072D4A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		040D37DE2A14C4310072D4A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		040D37E32A14C4330072D4A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		040D37E62A14C4330072D4A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		040D37E82A14C4330072D4A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		040D37ED2A14C4330072D4A5 /* Firebase-RealmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Firebase-RealmTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		040D37F12A14C4330072D4A5 /* Firebase_RealmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase_RealmTests.swift; sourceTree = "<group>"; };
+		040D37F72A14C4330072D4A5 /* Firebase-RealmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Firebase-RealmUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		040D37FB2A14C4330072D4A5 /* Firebase_RealmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase_RealmUITests.swift; sourceTree = "<group>"; };
+		040D37FD2A14C4330072D4A5 /* Firebase_RealmUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase_RealmUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		040D380A2A14C4910072D4A5 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
+		040D380C2A14C4A10072D4A5 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		040D380E2A14C4DA0072D4A5 /* ChatsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsPageViewController.swift; sourceTree = "<group>"; };
+		040D38132A14C57C0072D4A5 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		040D38152A14C5C70072D4A5 /* HeaderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTextField.swift; sourceTree = "<group>"; };
+		040D38172A14C5F60072D4A5 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		040D381B2A14E9E40072D4A5 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		040D381D2A14EACB0072D4A5 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		040D381F2A14EADA0072D4A5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		040D38212A14F07E0072D4A5 /* LinearGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearGradient.swift; sourceTree = "<group>"; };
+		040D38232A14FB3F0072D4A5 /* HomePageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageCell.swift; sourceTree = "<group>"; };
+		040D38252A1524450072D4A5 /* ChatsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsCollectionViewCell.swift; sourceTree = "<group>"; };
+		040D382B2A1560650072D4A5 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		040D382E2A1560C60072D4A5 /* Inter-VariableFont_slnt,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-VariableFont_slnt,wght.ttf"; sourceTree = "<group>"; };
+		040D38302A1560C60072D4A5 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
+		040D38312A1560C60072D4A5 /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
+		040D38322A1560C60072D4A5 /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
+		040D38332A1560C60072D4A5 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
+		040D38342A1560C60072D4A5 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		040D38352A1560C60072D4A5 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
+		040D38362A1560C60072D4A5 /* Inter-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraLight.ttf"; sourceTree = "<group>"; };
+		040D38372A1560C60072D4A5 /* Inter-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black.ttf"; sourceTree = "<group>"; };
+		040D38382A1560C60072D4A5 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		040D38392A1560C60072D4A5 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		040D383A2A1560C60072D4A5 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		040D37D42A14C4310072D4A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		040D37EA2A14C4330072D4A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		040D37F42A14C4330072D4A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		040D37CE2A14C4310072D4A5 = {
+			isa = PBXGroup;
+			children = (
+				040D37D92A14C4310072D4A5 /* Firebase-Realm */,
+				040D37F02A14C4330072D4A5 /* Firebase-RealmTests */,
+				040D37FA2A14C4330072D4A5 /* Firebase-RealmUITests */,
+				040D37D82A14C4310072D4A5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		040D37D82A14C4310072D4A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				040D37D72A14C4310072D4A5 /* Firebase-Realm.app */,
+				040D37ED2A14C4330072D4A5 /* Firebase-RealmTests.xctest */,
+				040D37F72A14C4330072D4A5 /* Firebase-RealmUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		040D37D92A14C4310072D4A5 /* Firebase-Realm */ = {
+			isa = PBXGroup;
+			children = (
+				040D382A2A155FCB0072D4A5 /* GoogleFont */,
+				040D38192A14C6100072D4A5 /* ReusableViews */,
+				040D38112A14C5020072D4A5 /* Delegates */,
+				040D38102A14C4EE0072D4A5 /* Controllers */,
+				040D38122A14C51E0072D4A5 /* Resources */,
+				040D381A2A14C62B0072D4A5 /* LaunchScreen */,
+				040D37E82A14C4330072D4A5 /* Info.plist */,
+			);
+			path = "Firebase-Realm";
+			sourceTree = "<group>";
+		};
+		040D37F02A14C4330072D4A5 /* Firebase-RealmTests */ = {
+			isa = PBXGroup;
+			children = (
+				040D37F12A14C4330072D4A5 /* Firebase_RealmTests.swift */,
+			);
+			path = "Firebase-RealmTests";
+			sourceTree = "<group>";
+		};
+		040D37FA2A14C4330072D4A5 /* Firebase-RealmUITests */ = {
+			isa = PBXGroup;
+			children = (
+				040D37FB2A14C4330072D4A5 /* Firebase_RealmUITests.swift */,
+				040D37FD2A14C4330072D4A5 /* Firebase_RealmUITestsLaunchTests.swift */,
+			);
+			path = "Firebase-RealmUITests";
+			sourceTree = "<group>";
+		};
+		040D38102A14C4EE0072D4A5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				040D381B2A14E9E40072D4A5 /* TabBar.swift */,
+				040D37DE2A14C4310072D4A5 /* ViewController.swift */,
+				040D380A2A14C4910072D4A5 /* LoginPageViewController.swift */,
+				040D380C2A14C4A10072D4A5 /* HomePageViewController.swift */,
+				040D380E2A14C4DA0072D4A5 /* ChatsPageViewController.swift */,
+				040D381D2A14EACB0072D4A5 /* CameraViewController.swift */,
+				040D381F2A14EADA0072D4A5 /* SettingsViewController.swift */,
+				040D38272A1525B90072D4A5 /* Cells */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		040D38112A14C5020072D4A5 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				040D37DA2A14C4310072D4A5 /* AppDelegate.swift */,
+				040D37DC2A14C4310072D4A5 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		040D38122A14C51E0072D4A5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				040D37E32A14C4330072D4A5 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		040D38192A14C6100072D4A5 /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				040D38132A14C57C0072D4A5 /* Label.swift */,
+				040D38212A14F07E0072D4A5 /* LinearGradient.swift */,
+				040D38172A14C5F60072D4A5 /* Button.swift */,
+				040D38152A14C5C70072D4A5 /* HeaderTextField.swift */,
+			);
+			path = ReusableViews;
+			sourceTree = "<group>";
+		};
+		040D381A2A14C62B0072D4A5 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				040D37E52A14C4330072D4A5 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		040D38272A1525B90072D4A5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				040D38232A14FB3F0072D4A5 /* HomePageCell.swift */,
+				040D38252A1524450072D4A5 /* ChatsCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		040D382A2A155FCB0072D4A5 /* GoogleFont */ = {
+			isa = PBXGroup;
+			children = (
+				040D382D2A1560C60072D4A5 /* Inter */,
+				040D382B2A1560650072D4A5 /* UIFont.swift */,
+			);
+			path = GoogleFont;
+			sourceTree = "<group>";
+		};
+		040D382D2A1560C60072D4A5 /* Inter */ = {
+			isa = PBXGroup;
+			children = (
+				040D382E2A1560C60072D4A5 /* Inter-VariableFont_slnt,wght.ttf */,
+				040D382F2A1560C60072D4A5 /* static */,
+				040D38392A1560C60072D4A5 /* OFL.txt */,
+				040D383A2A1560C60072D4A5 /* README.txt */,
+			);
+			path = Inter;
+			sourceTree = "<group>";
+		};
+		040D382F2A1560C60072D4A5 /* static */ = {
+			isa = PBXGroup;
+			children = (
+				040D38302A1560C60072D4A5 /* Inter-Medium.ttf */,
+				040D38312A1560C60072D4A5 /* Inter-Light.ttf */,
+				040D38322A1560C60072D4A5 /* Inter-Thin.ttf */,
+				040D38332A1560C60072D4A5 /* Inter-Bold.ttf */,
+				040D38342A1560C60072D4A5 /* Inter-Regular.ttf */,
+				040D38352A1560C60072D4A5 /* Inter-ExtraBold.ttf */,
+				040D38362A1560C60072D4A5 /* Inter-ExtraLight.ttf */,
+				040D38372A1560C60072D4A5 /* Inter-Black.ttf */,
+				040D38382A1560C60072D4A5 /* Inter-SemiBold.ttf */,
+			);
+			path = static;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		040D37D62A14C4310072D4A5 /* Firebase-Realm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 040D38012A14C4330072D4A5 /* Build configuration list for PBXNativeTarget "Firebase-Realm" */;
+			buildPhases = (
+				040D37D32A14C4310072D4A5 /* Sources */,
+				040D37D42A14C4310072D4A5 /* Frameworks */,
+				040D37D52A14C4310072D4A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Firebase-Realm";
+			productName = "Firebase-Realm";
+			productReference = 040D37D72A14C4310072D4A5 /* Firebase-Realm.app */;
+			productType = "com.apple.product-type.application";
+		};
+		040D37EC2A14C4330072D4A5 /* Firebase-RealmTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 040D38042A14C4330072D4A5 /* Build configuration list for PBXNativeTarget "Firebase-RealmTests" */;
+			buildPhases = (
+				040D37E92A14C4330072D4A5 /* Sources */,
+				040D37EA2A14C4330072D4A5 /* Frameworks */,
+				040D37EB2A14C4330072D4A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				040D37EF2A14C4330072D4A5 /* PBXTargetDependency */,
+			);
+			name = "Firebase-RealmTests";
+			productName = "Firebase-RealmTests";
+			productReference = 040D37ED2A14C4330072D4A5 /* Firebase-RealmTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		040D37F62A14C4330072D4A5 /* Firebase-RealmUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 040D38072A14C4330072D4A5 /* Build configuration list for PBXNativeTarget "Firebase-RealmUITests" */;
+			buildPhases = (
+				040D37F32A14C4330072D4A5 /* Sources */,
+				040D37F42A14C4330072D4A5 /* Frameworks */,
+				040D37F52A14C4330072D4A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				040D37F92A14C4330072D4A5 /* PBXTargetDependency */,
+			);
+			name = "Firebase-RealmUITests";
+			productName = "Firebase-RealmUITests";
+			productReference = 040D37F72A14C4330072D4A5 /* Firebase-RealmUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		040D37CF2A14C4310072D4A5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					040D37D62A14C4310072D4A5 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					040D37EC2A14C4330072D4A5 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 040D37D62A14C4310072D4A5;
+					};
+					040D37F62A14C4330072D4A5 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 040D37D62A14C4310072D4A5;
+					};
+				};
+			};
+			buildConfigurationList = 040D37D22A14C4310072D4A5 /* Build configuration list for PBXProject "Firebase-Realm" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 040D37CE2A14C4310072D4A5;
+			productRefGroup = 040D37D82A14C4310072D4A5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				040D37D62A14C4310072D4A5 /* Firebase-Realm */,
+				040D37EC2A14C4330072D4A5 /* Firebase-RealmTests */,
+				040D37F62A14C4330072D4A5 /* Firebase-RealmUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		040D37D52A14C4310072D4A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				040D38442A1560C70072D4A5 /* Inter-SemiBold.ttf in Resources */,
+				040D383D2A1560C70072D4A5 /* Inter-Light.ttf in Resources */,
+				040D38422A1560C70072D4A5 /* Inter-ExtraLight.ttf in Resources */,
+				040D383C2A1560C70072D4A5 /* Inter-Medium.ttf in Resources */,
+				040D38412A1560C70072D4A5 /* Inter-ExtraBold.ttf in Resources */,
+				040D383E2A1560C70072D4A5 /* Inter-Thin.ttf in Resources */,
+				040D383F2A1560C70072D4A5 /* Inter-Bold.ttf in Resources */,
+				040D38432A1560C70072D4A5 /* Inter-Black.ttf in Resources */,
+				040D38452A1560C70072D4A5 /* OFL.txt in Resources */,
+				040D37E72A14C4330072D4A5 /* LaunchScreen.storyboard in Resources */,
+				040D383B2A1560C70072D4A5 /* Inter-VariableFont_slnt,wght.ttf in Resources */,
+				040D38402A1560C70072D4A5 /* Inter-Regular.ttf in Resources */,
+				040D38462A1560C70072D4A5 /* README.txt in Resources */,
+				040D37E42A14C4330072D4A5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		040D37EB2A14C4330072D4A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		040D37F52A14C4330072D4A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		040D37D32A14C4310072D4A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				040D381E2A14EACB0072D4A5 /* CameraViewController.swift in Sources */,
+				040D37DF2A14C4310072D4A5 /* ViewController.swift in Sources */,
+				040D380B2A14C4910072D4A5 /* LoginPageViewController.swift in Sources */,
+				040D37DB2A14C4310072D4A5 /* AppDelegate.swift in Sources */,
+				040D38162A14C5C70072D4A5 /* HeaderTextField.swift in Sources */,
+				040D380D2A14C4A10072D4A5 /* HomePageViewController.swift in Sources */,
+				040D37DD2A14C4310072D4A5 /* SceneDelegate.swift in Sources */,
+				040D38142A14C57C0072D4A5 /* Label.swift in Sources */,
+				040D38242A14FB3F0072D4A5 /* HomePageCell.swift in Sources */,
+				040D38222A14F07E0072D4A5 /* LinearGradient.swift in Sources */,
+				040D38182A14C5F60072D4A5 /* Button.swift in Sources */,
+				040D38262A1524450072D4A5 /* ChatsCollectionViewCell.swift in Sources */,
+				040D382C2A1560650072D4A5 /* UIFont.swift in Sources */,
+				040D380F2A14C4DA0072D4A5 /* ChatsPageViewController.swift in Sources */,
+				040D381C2A14E9E40072D4A5 /* TabBar.swift in Sources */,
+				040D38202A14EADA0072D4A5 /* SettingsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		040D37E92A14C4330072D4A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				040D37F22A14C4330072D4A5 /* Firebase_RealmTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		040D37F32A14C4330072D4A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				040D37FC2A14C4330072D4A5 /* Firebase_RealmUITests.swift in Sources */,
+				040D37FE2A14C4330072D4A5 /* Firebase_RealmUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		040D37EF2A14C4330072D4A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 040D37D62A14C4310072D4A5 /* Firebase-Realm */;
+			targetProxy = 040D37EE2A14C4330072D4A5 /* PBXContainerItemProxy */;
+		};
+		040D37F92A14C4330072D4A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 040D37D62A14C4310072D4A5 /* Firebase-Realm */;
+			targetProxy = 040D37F82A14C4330072D4A5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		040D37E52A14C4330072D4A5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				040D37E62A14C4330072D4A5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		040D37FF2A14C4330072D4A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		040D38002A14C4330072D4A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		040D38022A14C4330072D4A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SFJ8H3MDYC;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Firebase-Realm/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chidiogo.Firebase-Realm";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		040D38032A14C4330072D4A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SFJ8H3MDYC;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Firebase-Realm/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chidiogo.Firebase-Realm";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		040D38052A14C4330072D4A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SFJ8H3MDYC;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chidiogo.Firebase-RealmTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Firebase-Realm.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Firebase-Realm";
+			};
+			name = Debug;
+		};
+		040D38062A14C4330072D4A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SFJ8H3MDYC;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chidiogo.Firebase-RealmTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Firebase-Realm.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Firebase-Realm";
+			};
+			name = Release;
+		};
+		040D38082A14C4330072D4A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SFJ8H3MDYC;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chidiogo.Firebase-RealmUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Firebase-Realm";
+			};
+			name = Debug;
+		};
+		040D38092A14C4330072D4A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SFJ8H3MDYC;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chidiogo.Firebase-RealmUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Firebase-Realm";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		040D37D22A14C4310072D4A5 /* Build configuration list for PBXProject "Firebase-Realm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				040D37FF2A14C4330072D4A5 /* Debug */,
+				040D38002A14C4330072D4A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		040D38012A14C4330072D4A5 /* Build configuration list for PBXNativeTarget "Firebase-Realm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				040D38022A14C4330072D4A5 /* Debug */,
+				040D38032A14C4330072D4A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		040D38042A14C4330072D4A5 /* Build configuration list for PBXNativeTarget "Firebase-RealmTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				040D38052A14C4330072D4A5 /* Debug */,
+				040D38062A14C4330072D4A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		040D38072A14C4330072D4A5 /* Build configuration list for PBXNativeTarget "Firebase-RealmUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				040D38082A14C4330072D4A5 /* Debug */,
+				040D38092A14C4330072D4A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 040D37CF2A14C4310072D4A5 /* Project object */;
+}
