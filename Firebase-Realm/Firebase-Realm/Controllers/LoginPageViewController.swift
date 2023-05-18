@@ -54,6 +54,7 @@ class LoginPageViewController: UIViewController {
         let button = Button(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
         //button.attr = customFont(size: <#T##CGFloat#>, font: <#T##FontFamily#>)
         button.setTitle("Log in", for: .normal)
+        button.setTitleColor(.white, for: .normal)
         button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         return button
     }()

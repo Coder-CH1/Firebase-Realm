@@ -40,6 +40,7 @@
 		040D38442A1560C70072D4A5 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 040D38382A1560C60072D4A5 /* Inter-SemiBold.ttf */; };
 		040D38452A1560C70072D4A5 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 040D38392A1560C60072D4A5 /* OFL.txt */; };
 		040D38462A1560C70072D4A5 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 040D383A2A1560C60072D4A5 /* README.txt */; };
+		040D38482A1579210072D4A5 /* ChatBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D38472A1579210072D4A5 /* ChatBottomSheetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		040D38382A1560C60072D4A5 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
 		040D38392A1560C60072D4A5 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		040D383A2A1560C60072D4A5 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		040D38472A1579210072D4A5 /* ChatBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBottomSheetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 				040D380A2A14C4910072D4A5 /* LoginPageViewController.swift */,
 				040D380C2A14C4A10072D4A5 /* HomePageViewController.swift */,
 				040D380E2A14C4DA0072D4A5 /* ChatsPageViewController.swift */,
+				040D38472A1579210072D4A5 /* ChatBottomSheetViewController.swift */,
 				040D381D2A14EACB0072D4A5 /* CameraViewController.swift */,
 				040D381F2A14EADA0072D4A5 /* SettingsViewController.swift */,
 				040D38272A1525B90072D4A5 /* Cells */,
@@ -421,6 +424,7 @@
 				040D380D2A14C4A10072D4A5 /* HomePageViewController.swift in Sources */,
 				040D37DD2A14C4310072D4A5 /* SceneDelegate.swift in Sources */,
 				040D38142A14C57C0072D4A5 /* Label.swift in Sources */,
+				040D38482A1579210072D4A5 /* ChatBottomSheetViewController.swift in Sources */,
 				040D38242A14FB3F0072D4A5 /* HomePageCell.swift in Sources */,
 				040D38222A14F07E0072D4A5 /* LinearGradient.swift in Sources */,
 				040D38182A14C5F60072D4A5 /* Button.swift in Sources */,

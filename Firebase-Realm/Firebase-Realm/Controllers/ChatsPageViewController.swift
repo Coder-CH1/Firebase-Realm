@@ -35,7 +35,7 @@ class ChatsPageViewController: UIViewController, UITableViewDelegate, UITableVie
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupConstraint()
@@ -44,7 +44,17 @@ class ChatsPageViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     @objc func buttonTapped() {
+        let bottomSheetViewController = ChatBottomSheetViewController()
         
+        bottomSheetViewController.modalPresentationStyle = .custom
+        bottomSheetViewController.transitioningDelegate = self
+        
+        present(bottomSheetViewController, animated: true, completion: nil)
+    }
+    
+    @objc func customButtonTapped() {
+        // Handle custom button tap
+        print("Custom button tapped")
     }
     
     func setupConstraint() {
@@ -58,12 +68,11 @@ class ChatsPageViewController: UIViewController, UITableViewDelegate, UITableVie
             tableView.topAnchor.constraint(equalTo: chatLabel.bottomAnchor, constant: 16),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 5),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -5),
-            tableView.bottomAnchor.constraint(equalTo: addButton.topAnchor, constant: -70),
-            //tableView.heightAnchor.constraint(equalToConstant: 300),
             
-//            addButton.topAnchor.constraint(equalTo: tableView.bottomAnchor, constant: 200),
+            addButton.topAnchor.constraint(equalTo: tableView.bottomAnchor, constant: 350),
+            addButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 308),
             addButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -32),
-            addButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -24),
+            addButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -120),
             addButton.heightAnchor.constraint(equalToConstant: 50),
             addButton.widthAnchor.constraint(equalToConstant: 50)
         ])
@@ -88,4 +97,115 @@ class ChatsPageViewController: UIViewController, UITableViewDelegate, UITableVie
         return 100
     }
     
+}
+
+extension ChatsPageViewController: UIViewControllerTransitioningDelegate {
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return BottomSheetPresentationController(presentedViewController: presented, presenting: presenting)
+    }
+}
+
+//class BottomSheetPresentationController: UIPresentationController {
+//    override var frameOfPresentedViewInContainerView: CGRect {
+//        guard let containerView = containerView else { return .zero }
+//
+//        // Calculate the frame for the presented view
+//        let height: CGFloat = 300 // Adjust the desired height of the bottom sheet
+//
+//        let frame = CGRect(x: 0, y: containerView.bounds.height - height, width: containerView.bounds.width, height: height)
+//        return frame
+//    }
+//
+//    override func containerViewWillLayoutSubviews() {
+//        super.containerViewWillLayoutSubviews()
+//
+//        // Customize the appearance of the container view
+//        containerView?.backgroundColor = .clear
+//    }
+//
+//    override func presentationTransitionWillBegin() {
+//        super.presentationTransitionWillBegin()
+//
+//        // Add any additional setup before the presentation begins
+//        guard let containerView = containerView else { return }
+//
+//        // Add a dimming view as a background overlay
+//        let dimmingView = UIView(frame: containerView.bounds)
+//        dimmingView.backgroundColor = UIColor(white: 0, alpha: 0.5)
+//        dimmingView.alpha = 0
+//        containerView.insertSubview(dimmingView, at: 0)
+//
+//        // Animate the dimming view appearance alongside the presentation
+//        presentingViewController.transitionCoordinator?.animate(alongsideTransition: { _ in
+//            dimmingView.alpha = 1
+//        }, completion: nil)
+//    }
+//
+//    override func dismissalTransitionWillBegin() {
+//        super.dismissalTransitionWillBegin()
+//
+//        // Add any additional setup before the dismissal begins
+//        guard let containerView = containerView else { return }
+//
+//        // Find the dimming view and remove it during dismissal
+//        let dimmingView = containerView.subviews.first { $0.backgroundColor == UIColor(white: 0, alpha: 0.5) }
+//
+//        // Animate the dimming view disappearance alongside the dismissal
+//        presentingViewController.transitionCoordinator?.animate(alongsideTransition: { _ in
+//            dimmingView?.alpha = 0
+//        }, completion: nil)
+//    }
+//}
+
+import UIKit
+
+class BottomSheetPresentationController: UIPresentationController {
+    override var frameOfPresentedViewInContainerView: CGRect {
+        guard let containerView = containerView else { return .zero }
+        
+        // Calculate the frame for the presented view
+        let height: CGFloat = 300 // Adjust the desired height of the bottom sheet
+        
+        let frame = CGRect(x: 0, y: containerView.bounds.height - height, width: containerView.bounds.width, height: height)
+        return frame
+    }
+    
+    override func containerViewWillLayoutSubviews() {
+        super.containerViewWillLayoutSubviews()
+        
+        // Customize the appearance of the container view
+        containerView?.backgroundColor = .clear
+    }
+    
+    override func presentationTransitionWillBegin() {
+        super.presentationTransitionWillBegin()
+        
+        // Add any additional setup before the presentation begins
+        guard let containerView = containerView else { return }
+        
+        // Add a dimming view as a background overlay
+        let dimmingView = UIView(frame: containerView.bounds)
+        dimmingView.backgroundColor = UIColor(white: 0, alpha: 0.5)
+        dimmingView.alpha = 0
+        containerView.insertSubview(dimmingView, at: 0)
+        
+        // Add the cancel button above the bottom sheet
+        let cancelButton = UIButton(type: .system)
+        cancelButton.setImage(UIImage(systemName: "xmark.circle"), for: .normal)
+        cancelButton.tintColor = .white
+        cancelButton.frame = CGRect(x: containerView.bounds.width - 100, y: containerView.bounds.height - frameOfPresentedViewInContainerView.height - 50, width: 100, height: 50)
+        cancelButton.addTarget(self, action: #selector(cancelButtonTapped), for: .touchUpInside)
+        containerView.addSubview(cancelButton)
+        
+        // Animate the dimming view appearance alongside the presentation
+        presentingViewController.transitionCoordinator?.animate(alongsideTransition: { _ in
+            dimmingView.alpha = 1
+        }, completion: nil)
+    }
+    
+    @objc func cancelButtonTapped() {
+        presentingViewController.dismiss(animated: true, completion: nil)
+    }
+    
+    // Rest of the code...
 }
