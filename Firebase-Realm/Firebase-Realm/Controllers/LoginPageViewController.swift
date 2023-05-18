@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import Firebase
+//import FirebaseAuth
 
-class LoginPageViewController: UIViewController {
+class LoginPageViewController: UIViewController, UITextFieldDelegate {
     
     lazy var loginLabel: UILabel = {
         let label = UILabel()
@@ -15,7 +17,6 @@ class LoginPageViewController: UIViewController {
         label.font = customFont(size: 24, font: .InterBold)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = #colorLiteral(red: 0, green: 0.05751294643, blue: 0.1677117348, alpha: 1)
-        //label.font = UIFont(name: "Inter-Bold", size: 24)
         return label
     }()
     
@@ -39,23 +40,23 @@ class LoginPageViewController: UIViewController {
     }()
     
     lazy var usernameTextfield: UITextField = {
-       let textfield = UITextField()
+        let textfield = UITextField()
         textfield.translatesAutoresizingMaskIntoConstraints = false
         let attributes = [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.631372549, green: 0.631372549, blue: 0.631372549, alpha: 1) ]
         textfield.attributedPlaceholder = NSAttributedString(string: "Enter username", attributes: attributes)
         let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: textfield.frame.height))
         textfield.leftView = leftView
         textfield.leftViewMode = .always
+        textfield.delegate = self
         textfield.backgroundColor = #colorLiteral(red: 0.862745098, green: 0.9647058824, blue: 0.9529411765, alpha: 1)
         return textfield
     }()
     
     lazy var loginButton: Button = {
-        let button = Button(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
-        //button.attr = customFont(size: <#T##CGFloat#>, font: <#T##FontFamily#>)
+        let button = Button()
         button.setTitle("Log in", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(loginButtonPressed), for: .touchUpInside)
         return button
     }()
     
@@ -63,14 +64,41 @@ class LoginPageViewController: UIViewController {
         super.viewDidLoad()
         setupConstraint()
         view.backgroundColor = .white
+        
     }
     
-    @objc func buttonTapped() {
-        let vc = TabBar()
-        vc.modalPresentationStyle = .fullScreen
-        navigationController?.present(vc, animated: true)
+    @objc func loginButtonPressed() {
+        guard let username = usernameTextfield.text else {
+            displayAlert(message: "Please enter a username")
+            return
+        }
+        
+        if let user = authenticateUser(withUsername: username) {
+            // Login successful, navigate to the next screen
+            let nextViewController = TabBar() // Pass the user object to the next screen if needed
+            navigationController?.pushViewController(nextViewController, animated: true)
+        } else {
+            // Login failed, display error message or perform appropriate action
+            displayAlert(message: "Invalid username")
+        }
     }
-
+    
+    func authenticateUser(withUsername username: String) -> User? {
+        // Find the user with the matching username
+        if let user = users.first(where: { $0.username == username }) {
+            return user
+        } else {
+            return nil
+        }
+    }
+    
+    func displayAlert(message: String) {
+        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
     func setupConstraint() {
         view.addSubview(loginLabel)
         view.addSubview(descriptionlabel)
@@ -95,8 +123,16 @@ class LoginPageViewController: UIViewController {
             
             loginButton.topAnchor.constraint(equalTo: usernameTextfield.bottomAnchor, constant: 32),
             loginButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 35),
-            loginButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -35)
+            loginButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -35),
         ])
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        usernameTextfield.resignFirstResponder()
+        return true
+    }
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        return true
     }
     
 }

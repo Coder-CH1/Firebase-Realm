@@ -37,7 +37,7 @@ class BottomSheetPresentationController: UIPresentationController {
         let cancelButton = UIButton(type: .system)
         cancelButton.setImage(UIImage(systemName: "xmark.circle"), for: .normal)
         cancelButton.tintColor = .white
-        cancelButton.frame = CGRect(x: containerView.bounds.width - 100, y: containerView.bounds.height - frameOfPresentedViewInContainerView.height - 50, width: 100, height: 50)
+        cancelButton.frame = CGRect(x: containerView.bounds.width - 100, y: containerView.bounds.height - frameOfPresentedViewInContainerView.height - 50, width: 100, height: 30)
         cancelButton.addTarget(self, action: #selector(cancelButtonTapped), for: .touchUpInside)
         containerView.addSubview(cancelButton)
         
