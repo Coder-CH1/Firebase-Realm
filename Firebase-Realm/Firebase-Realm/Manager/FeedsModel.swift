@@ -9,16 +9,18 @@ import Foundation
 import UIKit
 
 struct Feeds {
-    var feedImage: UIImage
+    var feedImage: UIImageView
     var feedName: String
     var userName: String
     var location: String
     var time: String
     var labelPost: String
-    var mediaPost: UIImage
-    var likeButton: UIImage
-    var commentButton: UIImage
-    var retweetButton: UIImage
-    var saveButton: UIImage
-    var shareButton: UIImage
+    var mediaPost: UIImageView
+    var like:  UIImageView
+    var comment:  UIImageView
+    var retweet:  UIImageView
+    var save:  UIImageView
+    var share:  UIImageView
 }
+
+

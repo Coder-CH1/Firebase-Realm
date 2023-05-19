@@ -9,16 +9,7 @@ import UIKit
 
 class HomePageViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    lazy var feedLabel: UILabel = {
-       let label = UILabel()
-        label.text = "Feed"
-        label.font = customFont(size: 23, font: .InterBold)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = #colorLiteral(red: 0.3955827355, green: 0.7141469717, blue: 0.6785815358, alpha: 1)
-        label.textAlignment = .left
-        
-        return label
-    }()
+    var feeds: [Feeds] = []
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -39,16 +30,23 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
         super.viewDidLoad()
         view.backgroundColor = .white
         setupConstraint()
+        setupTitle()
+    }
+    
+    func setupTitle() {
+        let titleLabel = UILabel()
+            titleLabel.text = "Feed"
+            titleLabel.textColor = #colorLiteral(red: 0.3955827355, green: 0.7141469717, blue: 0.6785815358, alpha: 1)
+            titleLabel.sizeToFit()
+            titleLabel.font = customFont(size: 23, font: .InterExtraBold)
+            let titleBarButtonItem = UIBarButtonItem(customView: titleLabel)
+            navigationItem.leftBarButtonItem = titleBarButtonItem
     }
     
     func setupConstraint() {
-        view.addSubview(feedLabel)
         view.addSubview(collectionView)
         NSLayoutConstraint.activate([
-            feedLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
-            feedLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            
-            collectionView.topAnchor.constraint(equalTo: feedLabel.bottomAnchor, constant: 16),
+            collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 16),
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 5),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -5),
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -24)
@@ -56,7 +54,7 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        3
+        return 1
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {

@@ -75,8 +75,9 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
         
         if let user = authenticateUser(withUsername: username) {
             // Login successful, navigate to the next screen
-            let nextViewController = TabBar() // Pass the user object to the next screen if needed
-            navigationController?.pushViewController(nextViewController, animated: true)
+            let nextViewController = TabBar()
+            nextViewController.modalPresentationStyle = .fullScreen
+            navigationController?.present(nextViewController, animated: true)
         } else {
             // Login failed, display error message or perform appropriate action
             displayAlert(message: "Invalid username")
