@@ -6,10 +6,20 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseFirestore
 
 class HomePageViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    var feeds: [Feeds] = []
+    var db: Firestore!
+    let postManager = PostManager()
+    let postViewModel = PostViewModel()
+    
+    var posts: [Post] = [] {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -25,22 +35,30 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
         collectionView.register(HomePageCell.self, forCellWithReuseIdentifier: HomePageCell.identifier)
         return collectionView
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupConstraint()
         setupTitle()
+        addPost()
+        db = Firestore.firestore()
+        postManager.fetchPosts { [weak self] posts in
+            self?.posts = posts
+        }
+    }
+    func updateUI(with posts: [Post]) {
+        collectionView.reloadData()
     }
     
     func setupTitle() {
         let titleLabel = UILabel()
-            titleLabel.text = "Feed"
-            titleLabel.textColor = #colorLiteral(red: 0.3955827355, green: 0.7141469717, blue: 0.6785815358, alpha: 1)
-            titleLabel.sizeToFit()
-            titleLabel.font = customFont(size: 23, font: .InterExtraBold)
-            let titleBarButtonItem = UIBarButtonItem(customView: titleLabel)
-            navigationItem.leftBarButtonItem = titleBarButtonItem
+        titleLabel.text = "Feed"
+        titleLabel.textColor = #colorLiteral(red: 0.3955827355, green: 0.7141469717, blue: 0.6785815358, alpha: 1)
+        titleLabel.sizeToFit()
+        titleLabel.font = customFont(size: 23, font: .InterExtraBold)
+        let titleBarButtonItem = UIBarButtonItem(customView: titleLabel)
+        navigationItem.leftBarButtonItem = titleBarButtonItem
     }
     
     func setupConstraint() {
@@ -52,9 +70,9 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -24)
         ])
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return  posts.count
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -63,20 +81,10 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCell", for: indexPath) as! HomePageCell
+        let post = posts[indexPath.section]
         
-        switch indexPath.section {
-        case 0:
-            cell.backgroundColor = .lightGray
-            cell.layer.cornerRadius = 8
-        case 1:
-            cell.backgroundColor = .lightGray
-            cell.layer.cornerRadius = 8
-        case 2:
-            cell.backgroundColor = .lightGray
-            cell.layer.cornerRadius = 8
-        default:
-            break
-        }
+        // Configure the cell with the post data
+        cell.setUpCustomCell(model: post)
         return cell
     }
     
@@ -86,4 +94,28 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
         return CGSize(width: cellWidth, height: collectionView.frame.height / 2.5)
     }
     
+    func addPost() {
+        let collectionName = "feeds"
+        let documentID = "6mb65O740dtpkIOGVFAT"
+        
+        postViewModel.addPostToFirestore(collectionName: collectionName, documentID: documentID, userImage: "userImageURL",
+                                         fullName: "John Doe",
+                                         userName: "johndoe",
+                                         location: "New York",
+                                         time: "2023-05-20 10:00:00",
+                                         postContent: "Hello, world!",
+                                         media: "postMediaURL",
+                                         isLiked: false,
+                                         likeCount: 0,
+                                         retweets: 0,
+                                         isSaved: false,
+                                         isShared: false) { error in
+            if let error = error {
+                print("Error adding post: \(error.localizedDescription)")
+            } else {
+                print("Post added successfully")
+            }
+        }
+    }
 }
+

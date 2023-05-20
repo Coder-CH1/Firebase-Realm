@@ -46,8 +46,9 @@
 		040D38512A15C45E0072D4A5 /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D38502A15C45E0072D4A5 /* BottomSheet.swift */; };
 		042662EA2A1649E900B5CEC5 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042662E92A1649E900B5CEC5 /* LoginModel.swift */; };
 		042662EE2A16927100B5CEC5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 042662ED2A16927100B5CEC5 /* GoogleService-Info.plist */; };
-		0456F4DD2A17D2DA00560E85 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456F4DC2A17D2DA00560E85 /* DataSource.swift */; };
-		04F1F09B2A16EBAC004AFF71 /* FeedsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F1F09A2A16EBAC004AFF71 /* FeedsModel.swift */; };
+		0456F4DF2A1835A900560E85 /* PostManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456F4DE2A1835A900560E85 /* PostManager.swift */; };
+		0456F4E12A185C2900560E85 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456F4E02A185C2900560E85 /* PostViewModel.swift */; };
+		04F1F09B2A16EBAC004AFF71 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F1F09A2A16EBAC004AFF71 /* PostModel.swift */; };
 		6CE16A36C15B6426D4CA0FBD /* Pods_Firebase_RealmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7919C2DD2455BF72A3A4A810 /* Pods_Firebase_RealmTests.framework */; };
 		BD376DB428C6079AF26A2EB2 /* Pods_Firebase_Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A283C20CB432412D087371F6 /* Pods_Firebase_Realm.framework */; };
 		C6F8CF6D42345F73B5A4CAFB /* Pods_Firebase_Realm_Firebase_RealmUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93E7109C95628625B656846D /* Pods_Firebase_Realm_Firebase_RealmUITests.framework */; };
@@ -114,8 +115,9 @@
 		040D38502A15C45E0072D4A5 /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
 		042662E92A1649E900B5CEC5 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		042662ED2A16927100B5CEC5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		0456F4DC2A17D2DA00560E85 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
-		04F1F09A2A16EBAC004AFF71 /* FeedsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsModel.swift; sourceTree = "<group>"; };
+		0456F4DE2A1835A900560E85 /* PostManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostManager.swift; sourceTree = "<group>"; };
+		0456F4E02A185C2900560E85 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		04F1F09A2A16EBAC004AFF71 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		5C94A980C0789D0075EEE627 /* Pods-Firebase-Realm-Firebase-RealmUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebase-Realm-Firebase-RealmUITests.release.xcconfig"; path = "Target Support Files/Pods-Firebase-Realm-Firebase-RealmUITests/Pods-Firebase-Realm-Firebase-RealmUITests.release.xcconfig"; sourceTree = "<group>"; };
 		743984FDB6600A9B884F1776 /* Pods-Firebase-Realm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebase-Realm.debug.xcconfig"; path = "Target Support Files/Pods-Firebase-Realm/Pods-Firebase-Realm.debug.xcconfig"; sourceTree = "<group>"; };
 		7919C2DD2455BF72A3A4A810 /* Pods_Firebase_RealmTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Firebase_RealmTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -312,9 +314,10 @@
 			isa = PBXGroup;
 			children = (
 				040D384B2A15B0800072D4A5 /* ChatsManager.swift */,
+				0456F4DE2A1835A900560E85 /* PostManager.swift */,
 				042662E92A1649E900B5CEC5 /* LoginModel.swift */,
-				04F1F09A2A16EBAC004AFF71 /* FeedsModel.swift */,
-				0456F4DC2A17D2DA00560E85 /* DataSource.swift */,
+				04F1F09A2A16EBAC004AFF71 /* PostModel.swift */,
+				0456F4E02A185C2900560E85 /* PostViewModel.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -602,6 +605,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0456F4E12A185C2900560E85 /* PostViewModel.swift in Sources */,
 				040D381E2A14EACB0072D4A5 /* CameraViewController.swift in Sources */,
 				042662EA2A1649E900B5CEC5 /* LoginModel.swift in Sources */,
 				040D37DF2A14C4310072D4A5 /* ViewController.swift in Sources */,
@@ -610,6 +614,7 @@
 				040D384F2A15C3D70072D4A5 /* Extension+ChatsPageViewController.swift in Sources */,
 				040D38162A14C5C70072D4A5 /* HeaderTextField.swift in Sources */,
 				040D380D2A14C4A10072D4A5 /* HomePageViewController.swift in Sources */,
+				0456F4DF2A1835A900560E85 /* PostManager.swift in Sources */,
 				040D37DD2A14C4310072D4A5 /* SceneDelegate.swift in Sources */,
 				040D38142A14C57C0072D4A5 /* Label.swift in Sources */,
 				040D38482A1579210072D4A5 /* ChatBottomSheetViewController.swift in Sources */,
@@ -618,8 +623,7 @@
 				040D38182A14C5F60072D4A5 /* Button.swift in Sources */,
 				040D38262A1524450072D4A5 /* ChatsCollectionViewCell.swift in Sources */,
 				040D382C2A1560650072D4A5 /* UIFont.swift in Sources */,
-				0456F4DD2A17D2DA00560E85 /* DataSource.swift in Sources */,
-				04F1F09B2A16EBAC004AFF71 /* FeedsModel.swift in Sources */,
+				04F1F09B2A16EBAC004AFF71 /* PostModel.swift in Sources */,
 				040D38512A15C45E0072D4A5 /* BottomSheet.swift in Sources */,
 				040D380F2A14C4DA0072D4A5 /* ChatsPageViewController.swift in Sources */,
 				040D381C2A14E9E40072D4A5 /* TabBar.swift in Sources */,

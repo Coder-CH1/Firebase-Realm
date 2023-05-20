@@ -47,10 +47,10 @@ class HomePageCell: UICollectionViewCell {
         return label
     }()
     
-    lazy var feedsMedia: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
+    lazy var feedsMedia: UIImageView = {
+        let media = UIImageView()
+        media.translatesAutoresizingMaskIntoConstraints = false
+        return media
     }()
     
     lazy var likeIcon: UIImageView = {
@@ -144,19 +144,35 @@ class HomePageCell: UICollectionViewCell {
             fatalError("init(coder:) has not been implemented")
         }
     
-}
+    func setUpCustomCell(model: Post) {
+        feedsImage.image = model.userImage
+        feedsName.text = model.fullname
+        feedsUsername.text = model.userName
+        feedsLocation.text = model.location
+        feedsTime.text = model.time
+        feedsPost.text = model.postContent
+        
+//        if !model.no_media {
+//            if model.video {
+//                feedsMedia.isHidden = true
+//                videoPlayerView.isHidden = false
+//                videoPlayerView.configure(with: model.videoURL)
+//            } else {
+//                feedsMedia.isHidden = false
+//                videoPlayerView.isHidden = true
+//                feedsMedia.image = model.media
+//            }
+//        } else {
+//            feedsMedia.isHidden = true
+//            videoPlayerView.isHidden = true
+//        }
+        
+        likeIcon.image = model.isLiked ? UIImage(named: "likeIconFilled") : UIImage(named: "likeIconEmpty")
+        commentIcon.image = UIImage(named: "commentIcon")
+        retweetIcon.image = UIImage(named: "retweetIcon")
+        saveIcon.image = model.isSaved ? UIImage(named: "saveIconFilled") : UIImage(named: "saveIconEmpty")
+        shareIcon.image = UIImage(named: "shareIcon")
+    }
 
-//struct Feeds {
-//    var feedImage: UIImage
-//    var feedName: String
-//    var userName: String
-//    var location: String
-//    var time: String
-//    var labelPost: String
-//    var mediaPost: UIImage
-//    var likeButton: UIImage
-//    var commentButton: UIImage
-//    var retweetButton: UIImage
-//    var saveButton: UIImage
-//    var shareButton: UIImage
-//}
+    
+}
