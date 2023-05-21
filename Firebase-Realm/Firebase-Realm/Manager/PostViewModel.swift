@@ -6,8 +6,7 @@
 //
 
 import Foundation
-// PostViewModel.swift
-// PostViewModel.swift
+
 class PostViewModel {
     let postManager = PostManager()
     
