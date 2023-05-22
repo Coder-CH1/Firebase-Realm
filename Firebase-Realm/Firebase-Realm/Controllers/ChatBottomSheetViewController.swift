@@ -49,9 +49,8 @@ class ChatBottomSheetViewController: UIViewController {
     
 
     func setupConstraint() {
-        view.addSubview(recipientLabel)
-        view.addSubview(usernameTextfield)
-        view.addSubview(startChatButton)
+        [recipientLabel, usernameTextfield, startChatButton].forEach { view.addSubview($0)}
+       
         NSLayoutConstraint.activate([
             recipientLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 25),
             recipientLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 33),

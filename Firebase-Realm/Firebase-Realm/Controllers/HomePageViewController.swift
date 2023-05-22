@@ -6,8 +6,8 @@
 //
 
 import UIKit
-import Firebase
 import FirebaseFirestore
+import FirebaseDatabase
 
 class HomePageViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -101,13 +101,13 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
         postViewModel.addPostToFirestore(collectionName: collectionName, documentID: documentID, userImage: "userImageURL",
                                          fullName: "John Doe",
                                          userName: "johndoe",
-                                         location: "New York",
+                                         location: "Nigeria",
                                          time: "2023-05-20 10:00:00",
                                          postContent: "Hello, world!",
                                          media: "postMediaURL",
-                                         isLiked: false,
-                                         likeCount: 0,
-                                         retweets: 0,
+                                         isLiked: true,
+                                         likeCount: 12,
+                                         retweets: 9,
                                          isSaved: false,
                                          isShared: false) { error in
             if let error = error {

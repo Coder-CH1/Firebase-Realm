@@ -6,12 +6,10 @@
 //
 
 import Foundation
-import Firebase
 import FirebaseFirestore
+import FirebaseDatabase
 
 class PostManager {
-    
-
     private let db = Firestore.firestore()
     private let collectionName = "feeds" // Replace with your actual collection name
 

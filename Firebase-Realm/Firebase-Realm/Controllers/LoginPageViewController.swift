@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginPageViewController: UIViewController, UITextFieldDelegate {
     
@@ -51,11 +52,29 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
         return textfield
     }()
     
+    lazy var passwordTextfield: UITextField = {
+        let textfield = UITextField()
+        textfield.translatesAutoresizingMaskIntoConstraints = false
+        let attributes = [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.631372549, green: 0.631372549, blue: 0.631372549, alpha: 1) ]
+        textfield.attributedPlaceholder = NSAttributedString(string: "Enter username", attributes: attributes)
+        let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: textfield.frame.height))
+        textfield.leftView = leftView
+        textfield.leftViewMode = .always
+        textfield.delegate = self
+        textfield.isSecureTextEntry = true
+        textfield.autocapitalizationType = .none
+        textfield.autocorrectionType = .no
+        textfield.delegate = self
+        textfield.isUserInteractionEnabled = true
+        textfield.backgroundColor = #colorLiteral(red: 0.862745098, green: 0.9647058824, blue: 0.9529411765, alpha: 1)
+        return textfield
+    }()
+    
     lazy var loginButton: Button = {
         let button = Button()
         button.setTitle("Log in", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.addTarget(self, action: #selector(loginButtonPressed), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
         return button
     }()
     
@@ -66,29 +85,26 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    @objc func loginButtonPressed() {
+    @objc func didTapLoginButton() {
         guard let username = usernameTextfield.text, !username.isEmpty else {
-                // Handle case when username is empty or not provided
-                let alertController = UIAlertController(title: "Error", message: "Please enter a username.", preferredStyle: .alert)
-                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-                alertController.addAction(okAction)
-                present(alertController, animated: true, completion: nil)
-                return
-            }
-            
-            let user = User(username: username)
-            let vc = TabBar()
+            // Handle case when username is empty or not provided
+            let alertController = UIAlertController(title: "Error", message: "Please enter a username.", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(okAction)
+            present(alertController, animated: true, completion: nil)
+            return
+        }
+        
+        let user = User(username: username)
+        let vc = TabBar()
         vc.modalPresentationStyle = .fullScreen
         navigationController?.present(vc, animated: true)
+        
     }
     
     func setupConstraint() {
-        view.addSubview(loginLabel)
-        view.addSubview(descriptionlabel)
-        view.addSubview(usernameLabel)
-        view.addSubview(usernameTextfield)
-        view.addSubview(loginButton)
-    
+        [loginLabel, descriptionlabel, usernameLabel, usernameTextfield, loginButton].forEach { view.addSubview($0)}
+        
         NSLayoutConstraint.activate([
             loginLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 89),
             loginLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 35),
@@ -120,3 +136,4 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
     }
     
 }
+
