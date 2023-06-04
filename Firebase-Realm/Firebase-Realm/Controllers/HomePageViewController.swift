@@ -7,7 +7,8 @@
 
 import UIKit
 import FirebaseFirestore
-import FirebaseDatabase
+import Firebase
+//import FirebaseDatabase
 
 class HomePageViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     

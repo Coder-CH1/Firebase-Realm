@@ -7,7 +7,8 @@
 
 import Foundation
 import FirebaseFirestore
-import FirebaseDatabase
+import Firebase
+//import FirebaseDatabase
 
 class PostManager {
     private let db = Firestore.firestore()
