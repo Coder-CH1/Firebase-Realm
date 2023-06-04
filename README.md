@@ -1,7 +1,7 @@
 # Firebase-Realm
 
 The Framework -
-This project was created using a UIkit Framework of programmatic ui, this convention comes with viewcontrollers with classes, properties, methods, extensions, reusable views, functions.
+This project was created using a UIkit Framework of programmatic ui, I designed with classes, properties, methods, extensions, reusable views, functions.
 
 The Designs -
 The figma design comprises of four screens and a bottom sheet. The icons and colors used was gotten from the figma design.
