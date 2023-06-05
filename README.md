@@ -18,7 +18,7 @@ I tested the login screen using the Xcode XCTest framework.
 Device Mode - 
 The dark mode features is enabled in the project.
 
-Firebase Manager - 
+Post Manager - 
 I created a file manager named Post Manager class that manages the post in the app and also interacts with the firestore database, This Post Manager have two properties which are an instance of Firestore and a collection name, the collection name property represents the name of the collection in which the posts are stored.
 
 The Post Manager have different methods for adding, fetching post or data from the Firestore Database.
@@ -37,5 +37,9 @@ Finally, it appends the post array and calls the completion closure with the pop
 PostViewModel - 
 This acts as an intermediary between the UI and the Post manager class. It contains a reference to an instance of Post Manager and provides a method addPostToFirestore to add a post to Firestore. Just like I explained previously, this method takes in various parameters representing the post properties.
 The reason I created this PostViewModel is to help in organizing and exposing the required methods from Post manager to the UI.
+
+UI -
+From the HomeViewController which contains the properties and methods, the PostViewModel will be called in the viewcontroller and also initialize the post property values, and also the post Manager will be called too in the Viewcontroller.
+
 
 Generally the features of the app design is created for users to post, and other users can comment, like, save, share in the post, the users of the app can also chat privately in the app.
