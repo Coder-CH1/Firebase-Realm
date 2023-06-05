@@ -34,6 +34,8 @@ As specified above, from the getDocuments which fetches the documents, if their 
 Finally, it appends the post array and calls the completion closure with the populated post array.
 
 
-
+PostViewModel - 
+This acts as an intermediary between the UI and the Post manager class. It contains a reference to an instance of Post Manager and provides a method addPostToFirestore to add a post to Firestore. Just like I explained previously, this method takes in various parameters representing the post properties.
+The reason I created this PostViewModel is to help in organizing and exposing the required methods from Post manager to the UI.
 
 Generally the features of the app design is created for users to post, and other users can comment, like, save, share in the post, the users of the app can also chat privately in the app.
