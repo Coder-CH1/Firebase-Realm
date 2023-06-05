@@ -29,7 +29,7 @@ Secondly, this happens to be the another method created, this method is called f
 
 A querySnapshot is an object that contains the results of a query. It contains an array of QueryDocumentSnapshot objects where each represents a single document that matches the query criteria in the Firestore. The main basic features of a querySnapshot is that it iterates or loops an array of documents in the Firestore.
 
-As stated above, from the getDocuments which fetches the documents, if their an error, it prints the error message and calls the completion closure with an empty array, otherwise it loops over the retrieved documents, extracts the data using the keys and creates a post object.
+As stated above, from the getDocuments which fetches the documents, if their is an error, it prints the error message and calls the completion closure with an empty array, otherwise it loops over the retrieved documents, extracts the data using the keys and creates a post object.
 
 Finally, it appends the post array and calls the completion closure with the populated post array.
 
