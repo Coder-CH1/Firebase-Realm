@@ -4,7 +4,7 @@ The Framework -
 This project was created using a UIkit Framework of programmatic ui, I designed with classes, properties, methods, extensions, reusable views, functions.
 
 The Designs -
-The figma design comprises of four screens and a bottom sheet. The icons and colors used was gotten from the figma design.
+The figma design comprises of five screens of tabbars and a bottom sheet. The icons and colors used was gotten from the figma design.
 
 The Design Pattern -
 The project was created using MVVM structuring of design patterns.
