@@ -41,5 +41,7 @@ The reason I created this PostViewModel is to help in organizing and exposing th
 UI -
 From the HomeViewController which contains the properties and methods, the PostViewModel will be called in the viewcontroller and also initialize the post property values, and also the post Manager will be called too in the Viewcontroller.
 
+I considered firstly making an authentication for the users first before implementing the Firestore Database features, its one major constraints in the project.
+
 
 Generally the features of the app design is created for users to post, and other users can comment, like, save, share in the post, the users of the app can also chat privately in the app.
