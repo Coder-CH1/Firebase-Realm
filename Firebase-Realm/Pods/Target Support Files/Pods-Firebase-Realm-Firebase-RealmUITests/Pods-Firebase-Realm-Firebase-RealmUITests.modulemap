@@ -1,0 +1,6 @@
+framework module Pods_Firebase_Realm_Firebase_RealmUITests {
+  umbrella header "Pods-Firebase-Realm-Firebase-RealmUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
