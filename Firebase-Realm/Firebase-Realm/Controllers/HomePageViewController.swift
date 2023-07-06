@@ -84,7 +84,7 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCell", for: indexPath) as! HomePageCell
         let post = posts[indexPath.item]
         
-        // Configure the cell with the post data
+        //MARK: - Configure the cell with the post data
         cell.setUpCustomCell(model: post)
         return cell
     }

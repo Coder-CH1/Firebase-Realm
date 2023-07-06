@@ -82,7 +82,6 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         setupConstraint()
         view.backgroundColor = .white
-        
     }
     
     @objc func didTapLoginButton() {
