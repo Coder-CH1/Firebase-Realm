@@ -62,6 +62,7 @@ class SignupPageViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        view.backgroundColor = .white
     }
     
     @objc func createUserBtnTapped() {
@@ -93,10 +94,12 @@ class SignupPageViewController: UIViewController, UITextFieldDelegate {
             emailTextfield.topAnchor.constraint(equalTo: createUserLabel.bottomAnchor, constant: 20),
             emailTextfield.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 35),
             emailTextfield.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -35),
+            emailTextfield.heightAnchor.constraint(equalToConstant: 48),
             
             passwordTextfield.topAnchor.constraint(equalTo: emailTextfield.bottomAnchor, constant: 20),
             passwordTextfield.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 35),
             passwordTextfield.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -35),
+            passwordTextfield.heightAnchor.constraint(equalToConstant: 48),
             
             createUserBtn.topAnchor.constraint(equalTo: passwordTextfield.bottomAnchor, constant: 20),
             createUserBtn.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 35),
