@@ -14,7 +14,7 @@ class ChatBottomSheetViewController: UIViewController {
         label.text = "Recipient's username"
         label.font = customFont(size: 18, font: .InterBold)
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = #colorLiteral(red: 0, green: 0.05751294643, blue: 0.1677117348, alpha: 1)
+        label.textColor =  UIColor(named: "")
         //label.font = UIFont(name: "Inter-Bold", size: 24)
         return label
     }()
@@ -27,7 +27,7 @@ class ChatBottomSheetViewController: UIViewController {
         let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: textfield.frame.height))
         textfield.leftView = leftView
         textfield.leftViewMode = .always
-        textfield.backgroundColor = #colorLiteral(red: 0.862745098, green: 0.9647058824, blue: 0.9529411765, alpha: 1)
+        textfield.backgroundColor = UIColor(named: "userTextFiedColor")
         return textfield
     }()
     

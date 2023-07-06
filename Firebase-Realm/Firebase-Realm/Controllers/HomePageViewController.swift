@@ -55,7 +55,7 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
     func setupTitle() {
         let titleLabel = UILabel()
         titleLabel.text = "Feed"
-        titleLabel.textColor = #colorLiteral(red: 0.3955827355, green: 0.7141469717, blue: 0.6785815358, alpha: 1)
+        titleLabel.textColor = UIColor(named: "feedLabelColor")
         titleLabel.sizeToFit()
         titleLabel.font = customFont(size: 23, font: .InterExtraBold)
         let titleBarButtonItem = UIBarButtonItem(customView: titleLabel)

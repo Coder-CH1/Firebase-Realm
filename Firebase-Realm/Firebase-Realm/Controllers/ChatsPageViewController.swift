@@ -13,7 +13,7 @@ class ChatsPageViewController: UIViewController, UITableViewDelegate, UITableVie
         let label = UILabel()
         label.text = "Chat"
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = #colorLiteral(red: 0, green: 0.05751294643, blue: 0.1677117348, alpha: 1)
+        label.textColor = UIColor(named: "chatLabelColor")
         label.font = customFont(size: 26, font: .InterMedium)
         return label
     }()
@@ -30,9 +30,10 @@ class ChatsPageViewController: UIViewController, UITableViewDelegate, UITableVie
     
     lazy var addButton: Button = {
         let button = Button()
-        button.setImage(UIImage(named: "addButton"), for: .normal)
+        button.setImage(UIImage(named: "addBtn"), for: .normal)
         button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.layer.cornerRadius = 50
         return button
     }()
     
