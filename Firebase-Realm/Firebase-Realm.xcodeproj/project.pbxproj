@@ -43,7 +43,6 @@
 		040D38512A15C45E0072D4A5 /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D38502A15C45E0072D4A5 /* BottomSheet.swift */; };
 		042662EE2A16927100B5CEC5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 042662ED2A16927100B5CEC5 /* GoogleService-Info.plist */; };
 		0456F4DF2A1835A900560E85 /* PostManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456F4DE2A1835A900560E85 /* PostManager.swift */; };
-		0456F4E12A185C2900560E85 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456F4E02A185C2900560E85 /* PostViewModel.swift */; };
 		04A68E032A562922007422B5 /* SignupPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A68E022A562922007422B5 /* SignupPageViewController.swift */; };
 		04A68E052A5629A1007422B5 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A68E042A5629A1007422B5 /* AuthManager.swift */; };
 		04F1F09B2A16EBAC004AFF71 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F1F09A2A16EBAC004AFF71 /* PostModel.swift */; };
@@ -113,7 +112,6 @@
 		040D38502A15C45E0072D4A5 /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
 		042662ED2A16927100B5CEC5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0456F4DE2A1835A900560E85 /* PostManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostManager.swift; sourceTree = "<group>"; };
-		0456F4E02A185C2900560E85 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		04A68E022A562922007422B5 /* SignupPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPageViewController.swift; sourceTree = "<group>"; };
 		04A68E042A5629A1007422B5 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		04F1F09A2A16EBAC004AFF71 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
@@ -319,7 +317,6 @@
 				04A68E042A5629A1007422B5 /* AuthManager.swift */,
 				04F793AE2A1A44BA00F2A02C /* UserModel.swift */,
 				04F1F09A2A16EBAC004AFF71 /* PostModel.swift */,
-				0456F4E02A185C2900560E85 /* PostViewModel.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -608,7 +605,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0456F4E12A185C2900560E85 /* PostViewModel.swift in Sources */,
 				04FA258A2A1B2C1300378B31 /* Button.swift in Sources */,
 				040D381E2A14EACB0072D4A5 /* CameraViewController.swift in Sources */,
 				04FA25882A1B29C200378B31 /* Extensions+EdgeInset.swift in Sources */,

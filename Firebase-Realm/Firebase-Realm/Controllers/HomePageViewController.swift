@@ -14,7 +14,7 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     var db: Firestore!
     let postManager = PostManager()
-    let postViewModel = PostViewModel()
+//    let postViewModel = PostViewModel()
     
     var posts: [Post] = [] {
         didSet {
@@ -99,7 +99,7 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
         let collectionName = "feeds"
         let documentID = "6mb65O740dtpkIOGVFAT"
         
-        postViewModel.addPostToFirestore(collectionName: collectionName, documentID: documentID, userImage: "userImageURL",
+        postManager.addPostToFirestore(collectionName: collectionName, documentID: documentID, userImage: "userImageURL",
                                          fullName: "John Doe",
                                          userName: "johndoe",
                                          location: "Nigeria",
