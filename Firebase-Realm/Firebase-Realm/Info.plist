@@ -2,6 +2,17 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string></string>
+		</dict>
+	</array>
+	<key>CFBundleURLSchemes</key>
+	<string>com.googleusercontent.apps.624643831709-94urs6gh539k1t1k8jc6e8unmtvtlqd9</string>
+	<key>GIDClientID</key>
+	<string>624643831709-94urs6gh539k1t1k8jc6e8unmtvtlqd9.apps.googleusercontent.com</string>
 	<key>FirebaseScreenReportingEnabled</key>
 	<false/>
 	<key>UIApplicationSceneManifest</key>
