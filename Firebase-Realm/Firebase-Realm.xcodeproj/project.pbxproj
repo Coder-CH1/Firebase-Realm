@@ -15,7 +15,7 @@
 		040D37F22A14C4330072D4A5 /* Firebase_RealmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D37F12A14C4330072D4A5 /* Firebase_RealmTests.swift */; };
 		040D37FC2A14C4330072D4A5 /* Firebase_RealmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D37FB2A14C4330072D4A5 /* Firebase_RealmUITests.swift */; };
 		040D37FE2A14C4330072D4A5 /* Firebase_RealmUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D37FD2A14C4330072D4A5 /* Firebase_RealmUITestsLaunchTests.swift */; };
-		040D380B2A14C4910072D4A5 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D380A2A14C4910072D4A5 /* LoginPageViewController.swift */; };
+		040D380B2A14C4910072D4A5 /* SigninPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D380A2A14C4910072D4A5 /* SigninPageViewController.swift */; };
 		040D380D2A14C4A10072D4A5 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D380C2A14C4A10072D4A5 /* HomePageViewController.swift */; };
 		040D380F2A14C4DA0072D4A5 /* ChatsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D380E2A14C4DA0072D4A5 /* ChatsPageViewController.swift */; };
 		040D38142A14C57C0072D4A5 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D38132A14C57C0072D4A5 /* Label.swift */; };
@@ -43,7 +43,6 @@
 		040D38512A15C45E0072D4A5 /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D38502A15C45E0072D4A5 /* BottomSheet.swift */; };
 		042662EE2A16927100B5CEC5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 042662ED2A16927100B5CEC5 /* GoogleService-Info.plist */; };
 		0456F4DF2A1835A900560E85 /* PostManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456F4DE2A1835A900560E85 /* PostManager.swift */; };
-		04A68E032A562922007422B5 /* SignupPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A68E022A562922007422B5 /* SignupPageViewController.swift */; };
 		04A68E052A5629A1007422B5 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A68E042A5629A1007422B5 /* AuthManager.swift */; };
 		04F1F09B2A16EBAC004AFF71 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F1F09A2A16EBAC004AFF71 /* PostModel.swift */; };
 		04F793AF2A1A44BA00F2A02C /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F793AE2A1A44BA00F2A02C /* UserModel.swift */; };
@@ -84,7 +83,7 @@
 		040D37F72A14C4330072D4A5 /* Firebase-RealmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Firebase-RealmUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		040D37FB2A14C4330072D4A5 /* Firebase_RealmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase_RealmUITests.swift; sourceTree = "<group>"; };
 		040D37FD2A14C4330072D4A5 /* Firebase_RealmUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase_RealmUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		040D380A2A14C4910072D4A5 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
+		040D380A2A14C4910072D4A5 /* SigninPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninPageViewController.swift; sourceTree = "<group>"; };
 		040D380C2A14C4A10072D4A5 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		040D380E2A14C4DA0072D4A5 /* ChatsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsPageViewController.swift; sourceTree = "<group>"; };
 		040D38132A14C57C0072D4A5 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
@@ -112,7 +111,6 @@
 		040D38502A15C45E0072D4A5 /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
 		042662ED2A16927100B5CEC5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0456F4DE2A1835A900560E85 /* PostManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostManager.swift; sourceTree = "<group>"; };
-		04A68E022A562922007422B5 /* SignupPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPageViewController.swift; sourceTree = "<group>"; };
 		04A68E042A5629A1007422B5 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		04F1F09A2A16EBAC004AFF71 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		04F793AE2A1A44BA00F2A02C /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -218,8 +216,7 @@
 			children = (
 				040D381B2A14E9E40072D4A5 /* TabBar.swift */,
 				040D37DE2A14C4310072D4A5 /* ViewController.swift */,
-				040D380A2A14C4910072D4A5 /* LoginPageViewController.swift */,
-				04A68E022A562922007422B5 /* SignupPageViewController.swift */,
+				040D380A2A14C4910072D4A5 /* SigninPageViewController.swift */,
 				040D380C2A14C4A10072D4A5 /* HomePageViewController.swift */,
 				040D380E2A14C4DA0072D4A5 /* ChatsPageViewController.swift */,
 				040D38472A1579210072D4A5 /* ChatBottomSheetViewController.swift */,
@@ -609,13 +606,12 @@
 				040D381E2A14EACB0072D4A5 /* CameraViewController.swift in Sources */,
 				04FA25882A1B29C200378B31 /* Extensions+EdgeInset.swift in Sources */,
 				040D37DF2A14C4310072D4A5 /* ViewController.swift in Sources */,
-				040D380B2A14C4910072D4A5 /* LoginPageViewController.swift in Sources */,
+				040D380B2A14C4910072D4A5 /* SigninPageViewController.swift in Sources */,
 				040D37DB2A14C4310072D4A5 /* AppDelegate.swift in Sources */,
 				040D384F2A15C3D70072D4A5 /* Extension+ChatsPageViewController.swift in Sources */,
 				040D380D2A14C4A10072D4A5 /* HomePageViewController.swift in Sources */,
 				0456F4DF2A1835A900560E85 /* PostManager.swift in Sources */,
 				040D37DD2A14C4310072D4A5 /* SceneDelegate.swift in Sources */,
-				04A68E032A562922007422B5 /* SignupPageViewController.swift in Sources */,
 				04F793AF2A1A44BA00F2A02C /* UserModel.swift in Sources */,
 				040D38142A14C57C0072D4A5 /* Label.swift in Sources */,
 				040D38482A1579210072D4A5 /* ChatBottomSheetViewController.swift in Sources */,
