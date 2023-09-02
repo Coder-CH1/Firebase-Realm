@@ -19,7 +19,7 @@ target 'Firebase-Realm' do
 	pod 'FirebaseFirestore'
 	pod 'FirebaseCore'
 	pod 'Firebase/Database'	
-pod 'GoogleSignIn'
+pod 'GoogleSignIn' 
 end
 
 
