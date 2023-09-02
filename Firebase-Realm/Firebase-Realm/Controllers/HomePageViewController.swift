@@ -14,7 +14,7 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     var db: Firestore!
     let postManager = PostManager()
-//    let postViewModel = PostViewModel()
+    //    let postViewModel = PostViewModel()
     
     var posts: [Post] = [] {
         didSet {
@@ -100,17 +100,17 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
         let documentID = "6mb65O740dtpkIOGVFAT"
         
         postManager.addPostToFirestore(collectionName: collectionName, documentID: documentID, userImage: "userImageURL",
-                                         fullName: "John Doe",
-                                         userName: "johndoe",
-                                         location: "Nigeria",
-                                         time: "2023-05-20 10:00:00",
-                                         postContent: "Hello, world!",
-                                         media: "postMediaURL",
-                                         isLiked: true,
-                                         likeCount: 12,
-                                         retweets: 9,
-                                         isSaved: false,
-                                         isShared: false) { error in
+                                       fullName: "John Doe",
+                                       userName: "johndoe",
+                                       location: "Nigeria",
+                                       time: "2023-05-20 10:00:00",
+                                       postContent: "Hello, world!",
+                                       media: "postMediaURL",
+                                       isLiked: true,
+                                       likeCount: 12,
+                                       retweets: 9,
+                                       isSaved: false,
+                                       isShared: false) { error in
             if let error = error {
                 print("Error adding post: \(error.localizedDescription)")
             } else {

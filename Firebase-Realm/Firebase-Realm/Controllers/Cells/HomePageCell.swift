@@ -12,7 +12,7 @@ class HomePageCell: UICollectionViewCell {
     static let identifier = "HomeCell"
     
     lazy var feedsImage: UIImageView = {
-       let image = UIImageView()
+        let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
     }()
@@ -54,35 +54,35 @@ class HomePageCell: UICollectionViewCell {
     }()
     
     lazy var likeIcon: UIImageView = {
-       let icon = UIImageView()
+        let icon = UIImageView()
         icon.translatesAutoresizingMaskIntoConstraints = false
         return icon
     }()
     
     lazy var commentIcon: UIImageView = {
-       let icon = UIImageView()
+        let icon = UIImageView()
         icon.translatesAutoresizingMaskIntoConstraints = false
         return icon
     }()
     
     lazy var retweetIcon: UIImageView = {
-       let icon = UIImageView()
+        let icon = UIImageView()
         icon.translatesAutoresizingMaskIntoConstraints = false
         return icon
     }()
     
     lazy var saveIcon: UIImageView = {
-       let icon = UIImageView()
+        let icon = UIImageView()
         icon.translatesAutoresizingMaskIntoConstraints = false
         return icon
     }()
     
     lazy var shareIcon: UIImageView = {
-       let icon = UIImageView()
+        let icon = UIImageView()
         icon.translatesAutoresizingMaskIntoConstraints = false
         return icon
     }()
-        
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupConstraint()
@@ -132,9 +132,9 @@ class HomePageCell: UICollectionViewCell {
             shareIcon.leadingAnchor.constraint(equalTo: saveIcon.trailingAnchor, constant: 38)
         ])
     }
-        required init?(coder: NSCoder) {
-            fatalError("init(coder:) has not been implemented")
-        }
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     func setUpCustomCell(model: Post) {
         feedsImage.image = model.userImage
@@ -144,27 +144,12 @@ class HomePageCell: UICollectionViewCell {
         feedsTime.text = model.time
         feedsPost.text = model.postContent
         
-//        if !model.no_media {
-//            if model.video {
-//                feedsMedia.isHidden = true
-//                videoPlayerView.isHidden = false
-//                videoPlayerView.configure(with: model.videoURL)
-//            } else {
-//                feedsMedia.isHidden = false
-//                videoPlayerView.isHidden = true
-//                feedsMedia.image = model.media
-//            }
-//        } else {
-//            feedsMedia.isHidden = true
-//            videoPlayerView.isHidden = true
-//        }
-        
         likeIcon.image = model.isLiked ? UIImage(named: "likeIconFilled") : UIImage(named: "likeIconEmpty")
         commentIcon.image = UIImage(named: "commentIcon")
         retweetIcon.image = UIImage(named: "retweetIcon")
         saveIcon.image = model.isSaved ? UIImage(named: "saveIconFilled") : UIImage(named: "saveIconEmpty")
         shareIcon.image = UIImage(named: "shareIcon")
     }
-
+    
     
 }

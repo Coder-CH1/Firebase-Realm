@@ -20,7 +20,7 @@ class ChatBottomSheetViewController: UIViewController {
     }()
     
     lazy var usernameTextfield: UITextField = {
-       let textfield = UITextField()
+        let textfield = UITextField()
         textfield.translatesAutoresizingMaskIntoConstraints = false
         let attributes = [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.631372549, green: 0.631372549, blue: 0.631372549, alpha: 1) ]
         textfield.attributedPlaceholder = NSAttributedString(string: "Enter username", attributes: attributes)
@@ -40,17 +40,17 @@ class ChatBottomSheetViewController: UIViewController {
         button.setTitleColor(.white, for: .normal)
         return button
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupConstraint()
         view.backgroundColor = .white
     }
     
-
+    
     func setupConstraint() {
         [recipientLabel, usernameTextfield, startChatButton].forEach { view.addSubview($0)}
-       
+        
         NSLayoutConstraint.activate([
             recipientLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 25),
             recipientLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 33),

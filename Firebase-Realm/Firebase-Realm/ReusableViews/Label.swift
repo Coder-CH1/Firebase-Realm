@@ -8,13 +8,13 @@
 import UIKit
 
 class Label: UILabel {
-
+    
     private var insets = UIEdgeInsets(allEdges: 0)
     
     override func drawText(in rect: CGRect) {
         super.drawText(in: rect.inset(by: insets))
     }
-
+    
     override var intrinsicContentSize: CGSize {
         let originalSize = super.intrinsicContentSize
         return CGSize(width: originalSize.width + insets.left + insets.right, height: originalSize.height + insets.top + insets.bottom)
@@ -22,7 +22,7 @@ class Label: UILabel {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-//        font = .helveticaNeueRegular(size: 13)
+        //        font = .helveticaNeueRegular(size: 13)
     }
     
     init(padding: UIEdgeInsets = .init(allEdges: 0), alignment: NSTextAlignment = .center) {
