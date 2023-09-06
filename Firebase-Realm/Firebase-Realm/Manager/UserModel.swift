@@ -8,9 +8,9 @@
 import Foundation
 
 struct User {
-    let username: String
-    
-    init(username: String) {
-        self.username = username
-    }
+    let uid: String
+    let displayName: String
+    let email: String
+    let profilePictureURL: String
+    let creationDate: Date
 }

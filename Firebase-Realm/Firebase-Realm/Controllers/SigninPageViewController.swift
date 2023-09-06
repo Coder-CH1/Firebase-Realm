@@ -19,6 +19,7 @@ class SigninPageViewController: UIViewController {
         setupCustomButton()
         setupViews()
         view.backgroundColor = .black
+        DatabaseManager.shared.test()
     }
     
     func configureGidc() {
@@ -69,7 +70,7 @@ class SigninPageViewController: UIViewController {
                 }
                 let vc = TabBar()
                 vc.modalPresentationStyle = .fullScreen
-                self.navigationController?.pushViewController(vc, animated: true)
+                self.present(vc, animated: true)
             }
         }
     }

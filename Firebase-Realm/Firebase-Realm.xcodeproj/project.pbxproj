@@ -38,7 +38,7 @@
 		040D38452A1560C70072D4A5 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 040D38392A1560C60072D4A5 /* OFL.txt */; };
 		040D38462A1560C70072D4A5 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 040D383A2A1560C60072D4A5 /* README.txt */; };
 		040D38482A1579210072D4A5 /* ChatBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D38472A1579210072D4A5 /* ChatBottomSheetViewController.swift */; };
-		040D384C2A15B0800072D4A5 /* ChatsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D384B2A15B0800072D4A5 /* ChatsManager.swift */; };
+		040D384C2A15B0800072D4A5 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D384B2A15B0800072D4A5 /* DatabaseManager.swift */; };
 		040D384F2A15C3D70072D4A5 /* Extension+ChatsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D384E2A15C3D70072D4A5 /* Extension+ChatsPageViewController.swift */; };
 		040D38512A15C45E0072D4A5 /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D38502A15C45E0072D4A5 /* BottomSheet.swift */; };
 		0456F4DF2A1835A900560E85 /* PostManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456F4DE2A1835A900560E85 /* PostManager.swift */; };
@@ -106,7 +106,7 @@
 		040D38392A1560C60072D4A5 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		040D383A2A1560C60072D4A5 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		040D38472A1579210072D4A5 /* ChatBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBottomSheetViewController.swift; sourceTree = "<group>"; };
-		040D384B2A15B0800072D4A5 /* ChatsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsManager.swift; sourceTree = "<group>"; };
+		040D384B2A15B0800072D4A5 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		040D384E2A15C3D70072D4A5 /* Extension+ChatsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+ChatsPageViewController.swift"; sourceTree = "<group>"; };
 		040D38502A15C45E0072D4A5 /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
 		0456F4DE2A1835A900560E85 /* PostManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostManager.swift; sourceTree = "<group>"; };
@@ -309,7 +309,7 @@
 		040D384D2A15B08D0072D4A5 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				040D384B2A15B0800072D4A5 /* ChatsManager.swift */,
+				040D384B2A15B0800072D4A5 /* DatabaseManager.swift */,
 				0456F4DE2A1835A900560E85 /* PostManager.swift */,
 				04A68E042A5629A1007422B5 /* AuthManager.swift */,
 				04F793AE2A1A44BA00F2A02C /* UserModel.swift */,
@@ -622,7 +622,7 @@
 				040D38512A15C45E0072D4A5 /* BottomSheet.swift in Sources */,
 				040D380F2A14C4DA0072D4A5 /* ChatsPageViewController.swift in Sources */,
 				040D381C2A14E9E40072D4A5 /* TabBar.swift in Sources */,
-				040D384C2A15B0800072D4A5 /* ChatsManager.swift in Sources */,
+				040D384C2A15B0800072D4A5 /* DatabaseManager.swift in Sources */,
 				040D38202A14EADA0072D4A5 /* SettingsViewController.swift in Sources */,
 				04A68E052A5629A1007422B5 /* AuthManager.swift in Sources */,
 			);
