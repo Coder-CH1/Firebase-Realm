@@ -7,13 +7,12 @@
 
 import Foundation
 import FirebaseFirestore
-import Firebase
-//import FirebaseDatabase
 
 class PostManager {
     private let db = Firestore.firestore()
-    private let collectionName = "feeds" // Replace with your actual collection name
+    private let collectionName = "posts" // Replace with your actual collection name
 
+    // Fetch posts from Firestore
     func fetchPosts(completion: @escaping ([Post]) -> Void) {
         let postsRef = db.collection(collectionName)
         
@@ -25,22 +24,11 @@ class PostManager {
                 var posts: [Post] = []
                 
                 for document in querySnapshot!.documents {
-                    let userImage = document.data()["imageURL"] as? UIImage
-                    let fullname = document.data()["fullname"] as? String ?? ""
-                    let username = document.data()["userName"] as? String ?? ""
-                    let location = document.data()["location"] as? String ?? ""
-                    let time = document.data()["time"] as? String ?? ""
-                    let postContent = document.data()["postContent"] as? String ?? ""
-                    let media = document.data()["imageURL"] as? UIImage
-                    let isLiked = document.data()["isLike"] as? Bool ?? false
-                    let likeCount = document.data()["likeCount"] as? Int ?? 0
-                    let retweets = document.data()["retweets"] as? Int ?? 0
-                    let isSaved = document.data()["isSaved"] as? Bool ?? false
-                    let isShared = document.data()["isShared"] as? Bool ?? false
-                    // Parse other properties here
-                    
-                    let post = Post(userImage: userImage, fullname: fullname, userName: username, location: location, time: time, postContent: postContent, media: media, isLiked: isLiked, likeCount: likeCount, retweets: retweets, isSaved: isSaved, isShared: isShared)
-                    posts.append(post)
+                    let data = document.data()
+                    // Parse data and create Post objects, similar to what you did in your code
+                    // ...
+                    // Create a Post object and add it to the 'posts' array
+                    // ...
                 }
                 
                 completion(posts)
@@ -48,33 +36,26 @@ class PostManager {
         }
     }
 
-    
-    func addPostToFirestore(collectionName: String, documentID: String, userImage: String, fullName: String, userName: String, location: String, time: String, postContent: String, media: String, isLiked: Bool, likeCount: Int, retweets: Int, isSaved: Bool, isShared: Bool, completion: @escaping (Error?) -> Void) {
-            let docRef = db.collection(collectionName).document(documentID)
-            
-            let data: [String: Any] = [
-                "userImage": userImage,
-                "fullName": fullName,
-                "userName": userName,
-                "location": location,
-                "time": time,
-                "postContent": postContent,
-                "media": media,
-                "isLiked": isLiked,
-                "likeCount": likeCount,
-                "retweets": retweets,
-                "isSaved": isSaved,
-                "isShared": isShared
-            ]
-            
-            docRef.setData(data) { error in
-                if let error = error {
-                    completion(error)
-                } else {
-                    completion(nil)
-                }
+    // Add a post to Firestore
+    func addPostToFirestore(post: Post, completion: @escaping (Error?) -> Void) {
+        let docRef = db.collection(collectionName).document()
+        
+        let data: [String: Any] = [
+            "userImage": post.userImage,
+            "fullname": post.fullname,
+            "userName": post.userName,
+            "location": post.location,
+            "time": post.time,
+            "postContent": post.postContent,
+            // Add other post properties here
+        ]
+        
+        docRef.setData(data) { error in
+            if let error = error {
+                completion(error)
+            } else {
+                completion(nil)
             }
         }
     }
-        
-       
+}
