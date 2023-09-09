@@ -48,7 +48,8 @@ class SigninPageViewController: UIViewController {
     }
     
     @objc func signinBtnPressed() {
-        GIDSignIn.sharedInstance.signIn(withPresenting: self) { [unowned self] result, error in
+        GIDSignIn.sharedInstance.signIn(withPresenting: self) { [weak self] result, error in
+            guard let strongSelf = self else {return}
             guard error == nil else {
                 print("Google Sign-In error: \(error!.localizedDescription)")
                 return
@@ -70,7 +71,8 @@ class SigninPageViewController: UIViewController {
                 }
                 let vc = TabBar()
                 vc.modalPresentationStyle = .fullScreen
-                self.present(vc, animated: true)
+                self?.present(vc, animated: true)
+                strongSelf.navigationController?.dismiss(animated: true)
             }
         }
     }
