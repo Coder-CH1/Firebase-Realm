@@ -41,7 +41,6 @@
 		040D384C2A15B0800072D4A5 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D384B2A15B0800072D4A5 /* DatabaseManager.swift */; };
 		040D384F2A15C3D70072D4A5 /* Extension+ChatsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D384E2A15C3D70072D4A5 /* Extension+ChatsPageViewController.swift */; };
 		040D38512A15C45E0072D4A5 /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D38502A15C45E0072D4A5 /* BottomSheet.swift */; };
-		0456F4DF2A1835A900560E85 /* PostManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456F4DE2A1835A900560E85 /* PostManager.swift */; };
 		0495DAEC2AA3FD0F0079CF60 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0495DAEB2AA3FD0F0079CF60 /* GoogleService-Info.plist */; };
 		04F1F09B2A16EBAC004AFF71 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F1F09A2A16EBAC004AFF71 /* PostModel.swift */; };
 		04F793AF2A1A44BA00F2A02C /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F793AE2A1A44BA00F2A02C /* UserModel.swift */; };
@@ -108,7 +107,6 @@
 		040D384B2A15B0800072D4A5 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		040D384E2A15C3D70072D4A5 /* Extension+ChatsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+ChatsPageViewController.swift"; sourceTree = "<group>"; };
 		040D38502A15C45E0072D4A5 /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
-		0456F4DE2A1835A900560E85 /* PostManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostManager.swift; sourceTree = "<group>"; };
 		0495DAEB2AA3FD0F0079CF60 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		04F1F09A2A16EBAC004AFF71 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		04F793AE2A1A44BA00F2A02C /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -308,7 +306,6 @@
 			isa = PBXGroup;
 			children = (
 				040D384B2A15B0800072D4A5 /* DatabaseManager.swift */,
-				0456F4DE2A1835A900560E85 /* PostManager.swift */,
 				04F793AE2A1A44BA00F2A02C /* UserModel.swift */,
 				04F1F09A2A16EBAC004AFF71 /* PostModel.swift */,
 			);
@@ -607,7 +604,6 @@
 				040D37DB2A14C4310072D4A5 /* AppDelegate.swift in Sources */,
 				040D384F2A15C3D70072D4A5 /* Extension+ChatsPageViewController.swift in Sources */,
 				040D380D2A14C4A10072D4A5 /* HomePageViewController.swift in Sources */,
-				0456F4DF2A1835A900560E85 /* PostManager.swift in Sources */,
 				040D37DD2A14C4310072D4A5 /* SceneDelegate.swift in Sources */,
 				04F793AF2A1A44BA00F2A02C /* UserModel.swift in Sources */,
 				040D38142A14C57C0072D4A5 /* Label.swift in Sources */,

@@ -12,8 +12,6 @@ import Firebase
 
 class HomePageViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    let postManager = PostManager()
-    
     var posts: [Post] = [] {
         didSet {
             collectionView.reloadData()
@@ -40,13 +38,6 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
         view.backgroundColor = .white
         setupConstraint()
         setupTitle()
-        postManager.fetchPosts { posts in
-            self.posts = posts
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
-        }
-
     }
     func updateUI(with posts: [Post]) {
         collectionView.reloadData()
