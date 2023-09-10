@@ -42,7 +42,6 @@
 		040D384F2A15C3D70072D4A5 /* Extension+ChatsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D384E2A15C3D70072D4A5 /* Extension+ChatsPageViewController.swift */; };
 		040D38512A15C45E0072D4A5 /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D38502A15C45E0072D4A5 /* BottomSheet.swift */; };
 		0495DAEC2AA3FD0F0079CF60 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0495DAEB2AA3FD0F0079CF60 /* GoogleService-Info.plist */; };
-		04F1F09B2A16EBAC004AFF71 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F1F09A2A16EBAC004AFF71 /* PostModel.swift */; };
 		04F793AF2A1A44BA00F2A02C /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F793AE2A1A44BA00F2A02C /* UserModel.swift */; };
 		04FA25882A1B29C200378B31 /* Extensions+EdgeInset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA25872A1B29C200378B31 /* Extensions+EdgeInset.swift */; };
 		04FA258A2A1B2C1300378B31 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA25892A1B2C1200378B31 /* Button.swift */; };
@@ -108,7 +107,6 @@
 		040D384E2A15C3D70072D4A5 /* Extension+ChatsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+ChatsPageViewController.swift"; sourceTree = "<group>"; };
 		040D38502A15C45E0072D4A5 /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
 		0495DAEB2AA3FD0F0079CF60 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		04F1F09A2A16EBAC004AFF71 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		04F793AE2A1A44BA00F2A02C /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		04FA25872A1B29C200378B31 /* Extensions+EdgeInset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+EdgeInset.swift"; sourceTree = "<group>"; };
 		04FA25892A1B2C1200378B31 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
@@ -307,7 +305,6 @@
 			children = (
 				040D384B2A15B0800072D4A5 /* DatabaseManager.swift */,
 				04F793AE2A1A44BA00F2A02C /* UserModel.swift */,
-				04F1F09A2A16EBAC004AFF71 /* PostModel.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -611,7 +608,6 @@
 				040D38242A14FB3F0072D4A5 /* HomePageCell.swift in Sources */,
 				040D38262A1524450072D4A5 /* ChatsCollectionViewCell.swift in Sources */,
 				040D382C2A1560650072D4A5 /* UIFont.swift in Sources */,
-				04F1F09B2A16EBAC004AFF71 /* PostModel.swift in Sources */,
 				040D38512A15C45E0072D4A5 /* BottomSheet.swift in Sources */,
 				040D380F2A14C4DA0072D4A5 /* ChatsPageViewController.swift in Sources */,
 				040D381C2A14E9E40072D4A5 /* TabBar.swift in Sources */,
