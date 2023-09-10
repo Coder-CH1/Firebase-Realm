@@ -12,12 +12,6 @@ import Firebase
 
 class HomePageViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    var posts: [Post] = [] {
-        didSet {
-            collectionView.reloadData()
-        }
-    }
-    
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -38,9 +32,6 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
         view.backgroundColor = .white
         setupConstraint()
         setupTitle()
-    }
-    func updateUI(with posts: [Post]) {
-        collectionView.reloadData()
     }
     
     func setupTitle() {
@@ -64,7 +55,7 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return  posts.count
+        return  20
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -73,10 +64,6 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCell", for: indexPath) as! HomePageCell
-        let post = posts[indexPath.item]
-        
-        //MARK: - Configure the cell with the post data
-        cell.setUpCustomCell(model: post)
         return cell
     }
     
