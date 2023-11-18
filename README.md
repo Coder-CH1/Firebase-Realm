@@ -1,5 +1,5 @@
 to# Firebase-Realm
 
 
-A UIkit(programmatic ui) based project that fetches post and chats from  Firebase Authenticated users.
+A UIkit(programmatic ui) based project that fetches post and chats from Firebase Authenticated users.
 Work in progress...
